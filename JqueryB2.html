@@ -1,0 +1,44 @@
+<!--
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-2.2.4.js"></script>
+  <title>Exercice 1</title>
+</head>
+<body>
+  <form>
+    <button type="button" name="button" id="clique-moi" >Clique-moi !</button>
+  </form>
+  <script>
+
+
+$("clique-moi").on('click', function(){
+	alert('Aie !!!! ');
+});
+
+
+  </script>
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-2.2.4.js"></script>
+    <title>Exercice 2</title>
+  </head>
+  <body>
+      <img src="https://raw.githubusercontent.com/simplonco/jquery-exercises-base2/master/Exercice_2/images/image.jpg" id="image" />
+      <script>
+
+    $('#image').on('dblclick', function(){
+    	$('#image').css('width' , '500px');
+ 	});
+      </script>
+  </body>
+</html>
