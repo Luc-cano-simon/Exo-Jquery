@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Exercice 1 </title>
+	<script src="jquery-2.2.4.js"></script>
+</head>
+<body>
+
+	<button type="button" name="button" id="bouton"> Cliquez ici pour les +1 </button>
+	<span type="text" name="texte" id="compteur"></span>
+	<script>
+		
+	var a = 0;
+  	$("#bouton").click(function() 
+  	{
+    a++;
+    $("#compteur").html(a);
+  	});
+		
+	</script>
+
+
+</body>
+</html>
