@@ -27,6 +27,7 @@
 
 -->
 
+<!--
 
 <!DOCTYPE html>
 <html>
@@ -62,4 +63,50 @@
 </body>
 </html>
 
+-->
 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercice Jquery - Partie 3</title>
+	<script src="jquery-2.2.4.js"></script>
+</head>
+<body>
+	<button type="button" name="button" id="cliquer">Cliquez ici </button>
+
+	<input type="text" name="texte" id="txt" placeholder="Indiquer un nombre entre 1 et 100"></input>
+	
+	<span id="resultat"></span>
+	<script>
+		
+	var min = 1;
+	var max = 100;
+	var nb = Math.floor(min + (max-min+1)*Math.random());
+	console.log(nb);
+	var cpt = 0;
+	$("#cliquer").on('click', function() 
+	{
+		var saisie = $('#txt').val();
+		console.log(saisie);
+		cpt ++;
+		if (saisie == nb) 
+		{
+			$('#resultat').html("jackpot ! Tu as trouvé le bon numéro au bout de " + cpt + " fois");
+			$("txt").val('');
+		}
+		else if (saisie < nb) 
+		{
+			$('#resultat').html("Résultat : raté c'est plus grand !!");
+			$("#txt").val('');
+		}
+		else if (saisie > nb) 
+		{
+			$('#resultat').html("Résultat : Raté c'est plus petit ");
+			$("#txt").val('');
+		}
+	});
+		
+	</script>
+</body>
+</html>
